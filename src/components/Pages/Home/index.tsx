@@ -122,8 +122,14 @@ const Home: React.FC = () => {
             Read WhitePaper
           </Typography>
         </Stack>
-        <Stack sx={{ flex: "1 1", justifyContent: "center" }}>
-          <img src={solgold} alt="" style={{ width: "100%" }} />
+        <Stack
+          sx={{ flex: "1 1", justifyContent: "center", alignItems: "center" }}
+        >
+          <img
+            src={solgold}
+            alt=""
+            style={{ width: "100%", maxWidth: "500px" }}
+          />
         </Stack>
       </Box>
     </AnimationBox>

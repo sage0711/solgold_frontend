@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from "@mui/joy";
-
+import { Box, Divider, Stack, Typography } from "@mui/joy";
+import styled from "@emotion/styled";
 import AnimationBox from "../../Animations";
 import BenifitImg from "../../../assets/imgs/benifit.png";
 import DiversificationImg from "../../../assets/imgs/diversification.png";
@@ -219,7 +219,131 @@ const Benifit: React.FC = () => {
             </Typography>
           </AnimationBox>
         </Box>
-        <Box></Box>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            justifyContent: "space-around",
+            borderBottom: "1px solid #003047",
+          }}
+        >
+          <Box sx={{ position: "relative", mb: "-12px" }}>
+            <Box
+              sx={{
+                width: "5px",
+                height: "5px",
+                background:
+                  "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                borderRadius: "10px",
+                ml: "3px",
+              }}
+            />
+            <Divider
+              orientation="vertical"
+              sx={{ height: "55px", bgcolor: "#003047", ml: "5px" }}
+            />
+            <Box
+              sx={{
+                width: "17px",
+                height: "17px",
+                background: "#003047",
+                borderRadius: "100%",
+                ml: "-5px",
+                mr: "-10px",
+                p: "3px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "10px",
+                  background: "transparent",
+                }}
+              />
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              mb: "-12px",
+              transform: "translateY(75px)",
+            }}
+          >
+            <Box
+              sx={{
+                width: "5px",
+                height: "5px",
+                background:
+                  "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                borderRadius: "10px",
+                ml: "3px",
+              }}
+            />
+            <Divider
+              orientation="vertical"
+              sx={{ height: "55px", bgcolor: "#003047", ml: "5px" }}
+            />
+
+            <Box
+              sx={{
+                width: "17px",
+                height: "17px",
+                background: "#003047",
+                borderRadius: "100%",
+                ml: "-5px",
+                mr: "-10px",
+                p: "3px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "10px",
+                  background:
+                    "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                }}
+              />
+            </Box>
+          </Box>
+          <Box sx={{ position: "relative", mb: "-12px" }}>
+            <Box
+              sx={{
+                width: "5px",
+                height: "5px",
+                background:
+                  "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                borderRadius: "10px",
+                ml: "3px",
+              }}
+            />
+            <Divider
+              orientation="vertical"
+              sx={{ height: "55px", bgcolor: "#003047", ml: "5px" }}
+            />
+            <Box
+              sx={{
+                width: "17px",
+                height: "17px",
+                background: "#003047",
+                borderRadius: "100%",
+                ml: "-5px",
+                mr: "-10px",
+                p: "3px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "10px",
+                  background:
+                    "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                }}
+              />
+            </Box>
+          </Box>
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -230,11 +354,24 @@ const Benifit: React.FC = () => {
             gap: "100px",
           }}
         >
-          <AnimationBox option={4} styles={{ flex: "1 1", p: "25px" }}>
+          <AnimationBox
+            option={4}
+            styles={{
+              flex: "1 1",
+              p: "25px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <img
               src={Transparent_lImg}
               alt=""
-              style={{ width: "100%", height: "100%" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                maxWidth: "300px",
+              }}
             />
           </AnimationBox>
           <AnimationBox
