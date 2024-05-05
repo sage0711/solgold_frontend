@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -8,8 +7,11 @@ import {
   MenuButton,
 } from "@mui/joy";
 import MenuIcon from "@mui/icons-material/Menu";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string>("Home");
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [menuCollapse, setMenuCollapse] = useState<boolean>(false);
@@ -26,7 +28,6 @@ const Header: React.FC = () => {
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -47,13 +48,13 @@ const Header: React.FC = () => {
 
   const handleCollapseMenu = () => {
     setMenuCollapse(!menuCollapse);
+    setIsOpen(!isOpen);
   };
 
   return (
     <Box
       sx={{
         p: "36px 69px",
-
         position: "fixed",
         top: 0,
         width: "100%",
@@ -105,16 +106,25 @@ const Header: React.FC = () => {
               open={menuCollapse}
             >
               {["Home", "About", "Benefits", "Market Trend", "Tokenomics"].map(
-                (value: string) => {
-                  return (
+                (value: string) => (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.3, filter: "blur(20px)" }}
+                    animate={{
+                      opacity: isOpen ? 1 : 0,
+                      scale: isOpen ? 1 : 0,
+                      filter: isOpen ? "blur(0px)" : "blur(20px)",
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <MenuItem
                       sx={getMenuStyle(value)}
                       onClick={() => handleMenuSelect(value)}
+                      key={value}
                     >
                       {value}
                     </MenuItem>
-                  );
-                }
+                  </motion.div>
+                )
               )}
             </Menu>
           </Dropdown>
@@ -127,16 +137,15 @@ const Header: React.FC = () => {
             }}
           >
             {["Home", "About", "Benefits", "Market Trend", "Tokenomics"].map(
-              (value: string, index: number) => {
-                return (
-                  <Typography
-                    sx={getMenuStyle(value)}
-                    onClick={() => handleMenuSelect(value)}
-                  >
-                    {value}
-                  </Typography>
-                );
-              }
+              (value: string, index: number) => (
+                <Typography
+                  key={index}
+                  sx={getMenuStyle(value)}
+                  onClick={() => handleMenuSelect(value)}
+                >
+                  {value}
+                </Typography>
+              )
             )}
           </Box>
         )}

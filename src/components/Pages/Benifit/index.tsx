@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/joy";
 
+import AnimationBox from "../../Animations";
 import BenifitImg from "../../../assets/imgs/benifit.png";
 import DiversificationImg from "../../../assets/imgs/diversification.png";
 import Transparent_lImg from "../../../assets/imgs/transparent_l.png";
@@ -39,56 +40,62 @@ const Benifit: React.FC = () => {
           backgroundImage: `url(${EllipseBottomImg})`,
         }}
       />
-      <Stack
-        sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
-      >
-        <Box
-          sx={{
-            position: "relative",
-            justifyContent: "space-around",
-            flex: "1 1",
-          }}
+      <AnimationBox option={1}>
+        <Stack
+          sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
         >
-          <Typography
-            sx={{
-              display: "inline",
-              fontWeight: 600,
-              fontSize: { xs: "30px", sm: "30px", md: "62px" },
-              background: "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              mr: "15px",
+          <AnimationBox
+            option={0}
+            styles={{
+              position: "relative",
+              justifyContent: "space-around",
+              flex: "1 1",
             }}
           >
-            Benefits
-          </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontWeight: 600,
+                fontSize: { xs: "30px", sm: "30px", md: "62px" },
+                background:
+                  "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+                mr: "15px",
+              }}
+            >
+              Benefits
+            </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontWeight: 600,
+                fontSize: { xs: "30px", sm: "30px", md: "62px" },
+                color: "#fff",
+                mr: "15px",
+              }}
+            >
+              with SolGold
+            </Typography>
+          </AnimationBox>
+
           <Typography
             sx={{
-              display: "inline",
-              fontWeight: 600,
-              fontSize: { xs: "30px", sm: "30px", md: "62px" },
+              fontSize: "19px",
+              fontWeight: "400",
               color: "#fff",
-              mr: "15px",
+              maxWidth: "664px",
+              textAlign: "center",
             }}
           >
-            with SolGold
+            Stagflation presents a unique challenge to investors, blending the
+            difficulties of high inflation with the stagnation of economic
+            growth.
           </Typography>
-        </Box>
-        <Typography
-          sx={{
-            fontSize: "19px",
-            fontWeight: "400",
-            color: "#fff",
-            maxWidth: "664px",
-            textAlign: "center",
-          }}
-        >
-          Stagflation presents a unique challenge to investors, blending the
-          difficulties of high inflation with the stagnation of economic growth.{" "}
-        </Typography>
-      </Stack>
+        </Stack>
+      </AnimationBox>
       <Stack>
         <Box
           sx={{
@@ -100,8 +107,9 @@ const Benifit: React.FC = () => {
             gap: "100px",
           }}
         >
-          <Box
-            sx={{
+          <AnimationBox
+            option={4}
+            styles={{
               bgcolor: "#212121",
               borderRadius: "10px",
               p: "25px",
@@ -142,9 +150,10 @@ const Benifit: React.FC = () => {
               purchasing power even in volatile economic climates, safeguarding
               your investments
             </Typography>
-          </Box>
-          <Box
-            sx={{
+          </AnimationBox>
+          <AnimationBox
+            option={4}
+            styles={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -153,9 +162,11 @@ const Benifit: React.FC = () => {
             }}
           >
             <img src={BenifitImg} alt="" style={{ width: "100%" }} />
-          </Box>
-          <Box
-            sx={{
+          </AnimationBox>
+
+          <AnimationBox
+            option={4}
+            styles={{
               bgcolor: "#212121",
               borderRadius: "10px",
               p: "25px",
@@ -202,7 +213,7 @@ const Benifit: React.FC = () => {
               purchasing power even in volatile economic climates, safeguarding
               your investments
             </Typography>
-          </Box>
+          </AnimationBox>
         </Box>
         <Box></Box>
         <Box
@@ -215,15 +226,16 @@ const Benifit: React.FC = () => {
             gap: "100px",
           }}
         >
-          <Box sx={{ flex: "1 1", p: "25px" }}>
+          <AnimationBox option={4} styles={{ flex: "1 1", p: "25px" }}>
             <img
               src={Transparent_lImg}
               alt=""
               style={{ width: "100%", height: "100%" }}
             />
-          </Box>
-          <Box
-            sx={{
+          </AnimationBox>
+          <AnimationBox
+            option={4}
+            styles={{
               bgcolor: "#212121",
               borderRadius: "10px",
               p: "25px",
@@ -264,9 +276,11 @@ const Benifit: React.FC = () => {
               investors with peace of mind and enhancing trust in SolGold as a
               reliable digital asset.
             </Typography>
-          </Box>
-          <Box
-            sx={{
+          </AnimationBox>
+
+          <AnimationBox
+            option={4}
+            styles={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -279,7 +293,7 @@ const Benifit: React.FC = () => {
               alt=""
               style={{ width: "100%", height: "100%" }}
             />
-          </Box>
+          </AnimationBox>
         </Box>
       </Stack>
     </Box>

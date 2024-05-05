@@ -1,4 +1,5 @@
 import { Box, Stack, Typography } from "@mui/joy";
+import AnimationBox from "../../Animations";
 
 import SolGoldImg from "../../../assets/imgs/solgold_sm.png";
 import TradeChartImg from "../../../assets/imgs/tradeChart.png";
@@ -55,46 +56,54 @@ const Market: React.FC = () => {
             flex: "1 1",
           }}
         >
-          <Typography
-            sx={{
-              display: "inline",
-              fontWeight: 600,
-              fontSize: { xs: "30px", sm: "30px", md: "62px" },
-              background: "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              mr: "15px",
-            }}
-          >
-            Live SolGold
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: 600,
-              fontSize: { xs: "30px", sm: "30px", md: "62px" },
-              color: "#fff",
-              mr: "15px",
-            }}
-          >
-            Market Stats
-          </Typography>
+          <AnimationBox option={3}>
+            <Typography
+              sx={{
+                display: "inline",
+                fontWeight: 600,
+                fontSize: { xs: "30px", sm: "30px", md: "62px" },
+                background:
+                  "linear-gradient(211deg, #BC813B, #FFE370, #BC813B)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+                mr: "15px",
+              }}
+            >
+              Live SolGold
+            </Typography>
+          </AnimationBox>
+          <AnimationBox option={3}>
+            <Typography
+              sx={{
+                fontWeight: 600,
+                fontSize: { xs: "30px", sm: "30px", md: "62px" },
+                color: "#fff",
+                mr: "15px",
+              }}
+            >
+              Market Stats
+            </Typography>
+          </AnimationBox>
         </Box>
         <Box sx={{ maxWidth: "640px" }}>
-          <Typography
-            sx={{
-              fontSize: "19px",
-              fontWeight: "400",
-              color: "#fff",
-            }}
-          >
-            Stagflation presents a unique challenge to investors, blending the
-            difficulties of high inflation with the stagnation of economic
-            growth. Traditional investments often falter under these conditions,
-            struggling with eroding returns and increased volatility. In
-            contrast, gold-backed cryptocurrencies offer a modern solution.
-          </Typography>
+          <AnimationBox option={3}>
+            <Typography
+              sx={{
+                fontSize: "19px",
+                fontWeight: "400",
+                color: "#fff",
+              }}
+            >
+              Stagflation presents a unique challenge to investors, blending the
+              difficulties of high inflation with the stagnation of economic
+              growth. Traditional investments often falter under these
+              conditions, struggling with eroding returns and increased
+              volatility. In contrast, gold-backed cryptocurrencies offer a
+              modern solution.
+            </Typography>
+          </AnimationBox>
         </Box>
       </Box>
       <Stack
