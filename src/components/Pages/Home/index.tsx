@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       id="Home"
       sx={{
         bgcolor: "#181716",
-        p: "168px 87px",
+        p: "168px 69px 87px 69px",
         display: "flex",
         flexDirection: {
           xs: "column-reverse",
