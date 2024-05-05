@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/joy";
 import AnimationBox from "../../Animations";
 
 import solgold from "../../../assets/imgs/solgold.png";
 
 const Home: React.FC = () => {
+  const [imageSrc, setImageSrc] = useState(solgold);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = solgold;
+    img.onload = () => {
+      setImageSrc(solgold);
+      setLoading(false);
+    };
+    img.onerror = () => {
+      console.error("Failed to load image:", solgold);
+      setImageSrc(solgold);
+    };
+  }, [solgold]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <AnimationBox option={1}>
       <Box
@@ -102,7 +122,7 @@ const Home: React.FC = () => {
           </Typography>
         </Stack>
         <Stack sx={{ flex: "1 1", justifyContent: "center" }}>
-          <img src={solgold} alt="" style={{ width: "100%" }} />
+          <img src={imageSrc} alt="" style={{ width: "100%" }} />
         </Stack>
       </Box>
     </AnimationBox>
