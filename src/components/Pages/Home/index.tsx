@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Stack, Typography } from "@mui/joy";
+import { Box, Stack, Typography, Skeleton } from "@mui/joy";
 import AnimationBox from "../../Animations";
 
 import solgold from "../../../assets/imgs/solgold.png";
@@ -122,7 +122,11 @@ const Home: React.FC = () => {
           </Typography>
         </Stack>
         <Stack sx={{ flex: "1 1", justifyContent: "center" }}>
-          <img src={imageSrc} alt="" style={{ width: "100%" }} />
+          {loading ? (
+            <Skeleton />
+          ) : (
+            <img src={solgold} alt="" style={{ width: "100%" }} />
+          )}
         </Stack>
       </Box>
     </AnimationBox>
