@@ -77,7 +77,9 @@ const Header: React.FC = () => {
             textFillColor: "transparent",
             fontSize: { xs: "20px", sm: "20px", md: "29px" },
             fontWeight: "600",
+            cursor: "pointer",
           }}
+          onClick={() => handleMenuSelect("Home")}
         >
           SolGOld
         </Typography>

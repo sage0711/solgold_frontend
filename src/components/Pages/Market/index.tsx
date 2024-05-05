@@ -97,7 +97,9 @@ const Market: React.FC = () => {
           </Typography>
         </Box>
       </Box>
-      <Stack sx={{ bgcolor: "#161616", borderRadius: "10px", p: "28px" }}>
+      <Stack
+        sx={{ bgcolor: "#161616", borderRadius: "10px", p: "28px", mt: "54px" }}
+      >
         <Box
           sx={{
             display: "flex",
