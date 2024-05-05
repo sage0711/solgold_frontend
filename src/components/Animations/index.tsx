@@ -32,8 +32,8 @@ const AnimationBox: React.FC<{
       transition: 0.7,
     },
     {
-      intial: { opacity: 0, y: 50 },
-      animate: { opacity: inView ? 1 : 0, y: inView ? 0 : 30 },
+      intial: { opacity: 0 },
+      animate: { opacity: inView ? 1 : 0 },
       transition: { delay: 0.3, duration: 2 },
     },
     {
