@@ -15,7 +15,7 @@ const Tokenomics: React.FC = () => {
       id="Tokenomics"
       sx={{
         bgcolor: "#181716",
-        p: "54px 82px",
+        p: { xs: "54px 25px", sm: "54px 82px" },
         display: "flex",
         flexDirection: "column",
         position: "relative",
@@ -26,9 +26,10 @@ const Tokenomics: React.FC = () => {
           position: "absolute",
           top: 0,
           left: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
@@ -36,9 +37,10 @@ const Tokenomics: React.FC = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseBottomImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Stack
@@ -47,8 +49,9 @@ const Tokenomics: React.FC = () => {
         <AnimationBox option={3}>
           <Box
             sx={{
+              display: "flex",
               position: "relative",
-              justifyContent: "space-around",
+              justifyContent: "center",
               flex: "1 1",
             }}
           >
@@ -124,7 +127,14 @@ const Tokenomics: React.FC = () => {
           <Stack sx={{ flex: "1 1" }}>
             <AnimationBox option={1}>
               <Stack sx={{ mt: "28px", gap: "77px" }}>
-                <Box sx={{ display: "flex", gap: "27px" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: "27px",
+                    flexDirection: { xs: "column", sm: "row" },
+                    alignItems: { xs: "center", sm: "unset" },
+                  }}
+                >
                   <img
                     src={supplyImg}
                     alt=""
@@ -157,7 +167,14 @@ const Tokenomics: React.FC = () => {
             </AnimationBox>
             <AnimationBox option={1}>
               <Stack sx={{ mt: "28px", gap: "77px" }}>
-                <Box sx={{ display: "flex", gap: "27px" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: "27px",
+                    flexDirection: { xs: "column", sm: "row" },
+                    alignItems: { xs: "center", sm: "unset" },
+                  }}
+                >
                   <img
                     src={allocationImg}
                     alt=""
@@ -189,8 +206,20 @@ const Tokenomics: React.FC = () => {
               </Stack>
             </AnimationBox>
             <AnimationBox option={1}>
-              <Stack sx={{ mt: "28px", gap: "77px" }}>
-                <Box sx={{ display: "flex", gap: "27px" }}>
+              <Stack
+                sx={{
+                  mt: "28px",
+                  gap: "77px",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: "27px",
+                    flexDirection: { xs: "column", sm: "row" },
+                    alignItems: { xs: "center", sm: "unset" },
+                  }}
+                >
                   <img
                     src={txFeeImg}
                     alt=""
@@ -223,7 +252,14 @@ const Tokenomics: React.FC = () => {
             </AnimationBox>
             <AnimationBox option={1}>
               <Stack sx={{ mt: "28px", gap: "77px" }}>
-                <Box sx={{ display: "flex", gap: "27px" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: "27px",
+                    flexDirection: { xs: "column", sm: "row" },
+                    alignItems: { xs: "center", sm: "unset" },
+                  }}
+                >
                   <img
                     src={LtValueImg}
                     alt=""

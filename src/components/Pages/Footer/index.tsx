@@ -13,7 +13,14 @@ const Footer: React.FC = () => {
         alignItems: "center",
       }}
     >
-      <Typography sx={{ fontSize: "22px", fontWeight: "600", color: "#fff" }}>
+      <Typography
+        sx={{
+          fontSize: "22px",
+          fontWeight: "600",
+          color: "#fff",
+          textAlign: "center",
+        }}
+      >
         SolGold © 2024 | All Rights Reserved
       </Typography>
       <Box sx={{ display: "flex", mt: "27px", gap: "32px" }}>

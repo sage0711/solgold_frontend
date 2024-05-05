@@ -28,7 +28,10 @@ const Home: React.FC = () => {
         id="Home"
         sx={{
           bgcolor: "#181716",
-          p: "168px 69px 87px 69px",
+          p: {
+            xs: "168px 25px 87px 25px",
+            sm: "168px 69px 87px 69px",
+          },
           display: "flex",
           flexDirection: {
             xs: "column-reverse",
@@ -49,7 +52,7 @@ const Home: React.FC = () => {
               sx={{
                 position: "absolute",
                 top: "-90px",
-                left: "50px",
+                left: { xs: "-100px", sm: "50px" },
                 width: { xs: "300px", sm: "500px" },
                 height: { xs: "300px", sm: "500px" },
                 background:

@@ -14,7 +14,7 @@ const Benifit: React.FC = () => {
       id="Benefits"
       sx={{
         bgcolor: "#181716",
-        p: "88px 106px",
+        p: { xs: "88px 30px", sm: "88px 106px" },
         display: "flex",
         flexDirection: "column",
         position: "relative",
@@ -25,9 +25,10 @@ const Benifit: React.FC = () => {
           position: "absolute",
           top: 0,
           left: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
@@ -35,9 +36,10 @@ const Benifit: React.FC = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseBottomImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <AnimationBox option={1}>
@@ -74,7 +76,7 @@ const Benifit: React.FC = () => {
                 fontWeight: 600,
                 fontSize: { xs: "30px", sm: "30px", md: "62px" },
                 color: "#fff",
-                mr: "15px",
+                textWrap: "nowrap",
               }}
             >
               with SolGold
@@ -135,7 +137,7 @@ const Benifit: React.FC = () => {
             <Typography
               sx={{
                 ml: "12px",
-                fontSize: { xs: "10px", sm: "10px", lg: "15px" },
+                fontSize: "15px",
                 letterSpacing: "1px",
                 lineHeight: "180%",
                 color: "#fff",
@@ -174,11 +176,13 @@ const Benifit: React.FC = () => {
               position: "relative",
             }}
           >
-            <img
-              src={DiversificationImg}
-              alt=""
-              style={{ position: "absolute", top: -70, left: -70 }}
-            />
+            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+              <img
+                src={DiversificationImg}
+                alt=""
+                style={{ position: "absolute", top: -70, left: -70 }}
+              />
+            </Box>
             <Typography
               sx={{
                 display: "inline",
@@ -198,7 +202,7 @@ const Benifit: React.FC = () => {
             <Typography
               sx={{
                 ml: "12px",
-                fontSize: { xs: "10px", sm: "10px", lg: "15px" },
+                fontSize: "15px",
                 letterSpacing: "1px",
                 lineHeight: "180%",
                 color: "#fff",
@@ -261,7 +265,7 @@ const Benifit: React.FC = () => {
             <Typography
               sx={{
                 ml: "12px",
-                fontSize: { xs: "10px", sm: "10px", md: "15px" },
+                fontSize: "15px",
                 letterSpacing: "1px",
                 lineHeight: "180%",
                 color: "#fff",

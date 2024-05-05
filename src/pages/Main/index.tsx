@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Box } from "@mui/joy";
+import { Box, Skeleton } from "@mui/joy";
 
 const Home = lazy(() => import("../../components/Pages/Home"));
 const Header = lazy(() => import("../../components/Pages/Header"));
@@ -11,7 +11,7 @@ const Footer = lazy(() => import("../../components/Pages/Footer"));
 
 const Main = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Skeleton />}>
       <Box>
         <Header />
         <Home />

@@ -54,7 +54,7 @@ const Header: React.FC = () => {
   return (
     <Box
       sx={{
-        p: "36px 69px",
+        p: { xs: "36px 25px", sm: "36px 69px" },
         position: "fixed",
         top: 0,
         width: "100%",
@@ -108,6 +108,7 @@ const Header: React.FC = () => {
               {["Home", "About", "Benefits", "Market Trend", "Tokenomics"].map(
                 (value: string) => (
                   <motion.div
+                    key={value}
                     initial={{ opacity: 0, scale: 0.3, filter: "blur(20px)" }}
                     animate={{
                       opacity: isOpen ? 1 : 0,
@@ -119,7 +120,6 @@ const Header: React.FC = () => {
                     <MenuItem
                       sx={getMenuStyle(value)}
                       onClick={() => handleMenuSelect(value)}
-                      key={value}
                     >
                       {value}
                     </MenuItem>

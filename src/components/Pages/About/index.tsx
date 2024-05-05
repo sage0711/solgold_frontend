@@ -12,7 +12,7 @@ const About: React.FC = () => {
       id="About"
       sx={{
         bgcolor: "#212121",
-        p: "64px 80px",
+        p: { xs: "64px 25px", sm: "64px 80px" },
         position: "relative",
         gap: "20px",
       }}
@@ -22,9 +22,10 @@ const About: React.FC = () => {
           position: "absolute",
           top: 0,
           left: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
@@ -32,9 +33,10 @@ const About: React.FC = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseBottomImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
@@ -119,7 +121,14 @@ const About: React.FC = () => {
         <Stack sx={{ flex: "1 1" }}>
           <Stack sx={{ mt: "28px", gap: "77px" }}>
             <AnimationBox option={1}>
-              <Box sx={{ display: "flex", gap: "27px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "27px",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: { xs: "center", sm: "unset" },
+                }}
+              >
                 <img
                   src={ImpactImg}
                   alt=""
@@ -136,7 +145,7 @@ const About: React.FC = () => {
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: "320px",
+                      maxWidth: { xs: "500px", sm: "320px" },
                     }}
                   >
                     Stagflation presents a unique challenge to investors,
@@ -146,7 +155,14 @@ const About: React.FC = () => {
               </Box>
             </AnimationBox>
             <AnimationBox option={1}>
-              <Box sx={{ display: "flex", gap: "27px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "27px",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: { xs: "center", sm: "unset" },
+                }}
+              >
                 <img
                   src={ImpactImg}
                   alt=""
@@ -163,7 +179,7 @@ const About: React.FC = () => {
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: "320px",
+                      maxWidth: { xs: "500px", sm: "320px" },
                     }}
                   >
                     Stagflation presents a unique challenge to investors,
@@ -173,7 +189,14 @@ const About: React.FC = () => {
               </Box>
             </AnimationBox>
             <AnimationBox option={1}>
-              <Box sx={{ display: "flex", gap: "27px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "27px",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: { xs: "center", sm: "unset" },
+                }}
+              >
                 <img
                   src={ImpactImg}
                   alt=""
@@ -190,7 +213,7 @@ const About: React.FC = () => {
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: "320px",
+                      maxWidth: { xs: "500px", sm: "320px" },
                     }}
                   >
                     Stagflation presents a unique challenge to investors,
@@ -201,14 +224,20 @@ const About: React.FC = () => {
             </AnimationBox>
           </Stack>
         </Stack>
-        <AnimationBox option={0}>
-          <Stack sx={{ flex: "1 1", alignItems: "end" }}>
-            <img
-              src={AboutImg}
-              alt=""
-              style={{ maxWidth: "720px", width: "100%" }}
-            />
-          </Stack>
+        <AnimationBox
+          option={0}
+          styles={{
+            display: "flex",
+            flexDirection: "column",
+            flex: "1 1",
+            alignItems: "end",
+          }}
+        >
+          <img
+            src={AboutImg}
+            alt=""
+            style={{ maxWidth: "720px", width: "100%" }}
+          />
         </AnimationBox>
       </Box>
     </Stack>

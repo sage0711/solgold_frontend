@@ -12,7 +12,7 @@ const Market: React.FC = () => {
       id="Market"
       sx={{
         bgcolor: "#212121",
-        p: "77px 69px",
+        p: { xs: "77px 25px", sm: "77px 69px" },
         position: "relative",
         gap: "20px",
       }}
@@ -22,9 +22,10 @@ const Market: React.FC = () => {
           position: "absolute",
           top: 0,
           left: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
@@ -32,9 +33,10 @@ const Market: React.FC = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: "500px",
-          height: "500px",
+          width: { xs: "300px", sm: "300px", md: "500px" },
+          height: { xs: "300px", sm: "300px", md: "500px" },
           backgroundImage: `url(${EllipseBottomImg})`,
+          backgroundSize: "100% 100%",
         }}
       />
       <Box
