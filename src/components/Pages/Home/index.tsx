@@ -58,7 +58,7 @@ const Home: React.FC = () => {
                 background:
                   "radial-gradient(closest-side, #f9e07b1c, #dfb66314, transparent)",
               }}
-            ></Box>
+            />
             <Typography
               sx={{
                 display: "inline",
