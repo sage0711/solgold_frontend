@@ -105,27 +105,32 @@ const Header: React.FC = () => {
               }}
               open={menuCollapse}
             >
-              {["Home", "About", "Benefits", "Market Trend", "Tokenomics"].map(
-                (value: string) => (
-                  <motion.div
-                    key={value}
-                    initial={{ opacity: 0, scale: 0.3, filter: "blur(20px)" }}
-                    animate={{
-                      opacity: isOpen ? 1 : 0,
-                      scale: isOpen ? 1 : 0,
-                      filter: isOpen ? "blur(0px)" : "blur(20px)",
-                    }}
-                    transition={{ duration: 0.3 }}
+              {[
+                "Home",
+                "About",
+                "Benefits",
+                "Market Trend",
+                "RoadMap",
+                "Tokenomics",
+              ].map((value: string) => (
+                <motion.div
+                  key={value}
+                  initial={{ opacity: 0, scale: 0.3, filter: "blur(20px)" }}
+                  animate={{
+                    opacity: isOpen ? 1 : 0,
+                    scale: isOpen ? 1 : 0,
+                    filter: isOpen ? "blur(0px)" : "blur(20px)",
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <MenuItem
+                    sx={getMenuStyle(value)}
+                    onClick={() => handleMenuSelect(value)}
                   >
-                    <MenuItem
-                      sx={getMenuStyle(value)}
-                      onClick={() => handleMenuSelect(value)}
-                    >
-                      {value}
-                    </MenuItem>
-                  </motion.div>
-                )
-              )}
+                    {value}
+                  </MenuItem>
+                </motion.div>
+              ))}
             </Menu>
           </Dropdown>
         ) : (
@@ -136,17 +141,22 @@ const Header: React.FC = () => {
               alignItems: "center",
             }}
           >
-            {["Home", "About", "Benefits", "Market Trend", "Tokenomics"].map(
-              (value: string, index: number) => (
-                <Typography
-                  key={index}
-                  sx={getMenuStyle(value)}
-                  onClick={() => handleMenuSelect(value)}
-                >
-                  {value}
-                </Typography>
-              )
-            )}
+            {[
+              "Home",
+              "About",
+              "Benefits",
+              "Market Trend",
+              "RoadMap",
+              "Tokenomics",
+            ].map((value: string, index: number) => (
+              <Typography
+                key={index}
+                sx={getMenuStyle(value)}
+                onClick={() => handleMenuSelect(value)}
+              >
+                {value}
+              </Typography>
+            ))}
           </Box>
         )}
         <Box
