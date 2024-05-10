@@ -1,6 +1,6 @@
 import { Stack, Box, Typography, Link } from "@mui/joy";
 import TwitterImg from "../../../assets/imgs/twitter.png";
-import DiscordImg from "../../../assets/imgs/discord.png";
+import MailImg from "../../../assets/imgs/mail.png";
 import TelegramImg from "../../../assets/imgs/telegram.png";
 import AnimationBox from "../../Animations";
 const Footer: React.FC = () => {
@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
           </Link>
         </AnimationBox>
         <AnimationBox option={4}>
-          <Link underline="none" href="https://discord.gg/invite/solgoldorg">
-            <img src={DiscordImg} alt="" />
+          <Link underline="none" href="mailto:contact@solgold.org">
+            <img src={MailImg} alt="" />
           </Link>
         </AnimationBox>
         <AnimationBox option={4}>

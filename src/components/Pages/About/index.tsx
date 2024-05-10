@@ -138,18 +138,19 @@ const About: React.FC = () => {
                   <Typography
                     sx={{ fontSize: "26px", fontWeight: "500", color: "#fff" }}
                   >
-                    Impact of Stagflation
+                    Squeezed household budgets
                   </Typography>
                   <Typography
                     sx={{
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: { xs: "500px", sm: "320px" },
+                      maxWidth: "500px",
                     }}
                   >
-                    Stagflation presents a unique challenge to investors,
-                    blending the difficulties of high inflation with the
+                    With inflation driving prices up, people's paychecks buy
+                    less. This can lead to tough choices about affording basic
+                    necessities.
                   </Typography>
                 </Stack>
               </Box>
@@ -172,18 +173,19 @@ const About: React.FC = () => {
                   <Typography
                     sx={{ fontSize: "26px", fontWeight: "500", color: "#fff" }}
                   >
-                    Impact of Stagflation
+                    Stalled businesses
                   </Typography>
                   <Typography
                     sx={{
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: { xs: "500px", sm: "320px" },
+                      maxWidth: "500px",
                     }}
                   >
-                    Stagflation presents a unique challenge to investors,
-                    blending the difficulties of high inflation with the
+                    Slow economic growth means businesses are hesitant to invest
+                    and expand. This can lead to hiring freezes or even layoffs,
+                    further worsening unemployment.
                   </Typography>
                 </Stack>
               </Box>
@@ -206,18 +208,20 @@ const About: React.FC = () => {
                   <Typography
                     sx={{ fontSize: "26px", fontWeight: "500", color: "#fff" }}
                   >
-                    Impact of Stagflation
+                    Policy headaches
                   </Typography>
                   <Typography
                     sx={{
                       fontSize: "15px",
                       fontWeight: "300",
                       color: "#fff",
-                      maxWidth: { xs: "500px", sm: "320px" },
+                      maxWidth: "500px",
                     }}
                   >
-                    Stagflation presents a unique challenge to investors,
-                    blending the difficulties of high inflation with the
+                    Stagflation creates a dilemma for policymakers. Tools used
+                    to fight inflation, like raising interest rates, can slow
+                    economic growth further. This makes it difficult to steer
+                    the economy out of stagflation.
                   </Typography>
                 </Stack>
               </Box>

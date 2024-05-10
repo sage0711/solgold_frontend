@@ -170,6 +170,9 @@ const Header: React.FC = () => {
             alignItems: "center",
             cursor: "pointer",
           }}
+          onClick={() =>
+            window.location.replace("https://solgold.gitbook.io/docs/")
+          }
         >
           <Typography
             sx={{

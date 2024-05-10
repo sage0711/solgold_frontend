@@ -132,7 +132,7 @@ const Benifit: React.FC = () => {
                 mr: "15px",
               }}
             >
-              Inflation Hedge
+              Limited Supply & Store of Value
             </Typography>
             <Typography
               sx={{
@@ -145,12 +145,12 @@ const Benifit: React.FC = () => {
                 mt: "6px",
               }}
             >
-              SolGold provides a robust hedge against inflation by being backed
-              by physical gold. Gold has historically maintained its value and
-              often appreciates when real returns on other assets decline due to
-              inflation. This intrinsic quality of gold helps SolGold maintain
-              purchasing power even in volatile economic climates, safeguarding
-              your investments
+              Unlike currencies, which can be printed by governments, there's a
+              finite amount of gold readily available. This scarcity makes gold
+              a hedge against inflation. As the value of currency decreases due
+              to inflation, gold's value tends to hold steady or even increase
+              because it represents a tangible asset with a limited supply.
+              People see it as a reliable store of value over time.
             </Typography>
           </AnimationBox>
           <AnimationBox
@@ -197,7 +197,7 @@ const Benifit: React.FC = () => {
                 mr: "15px",
               }}
             >
-              Inflation Hedge
+              Safe-Haven Asset
             </Typography>
             <Typography
               sx={{
@@ -210,12 +210,12 @@ const Benifit: React.FC = () => {
                 mt: "6px",
               }}
             >
-              SolGold provides a robust hedge against inflation by being backed
-              by physical gold. Gold has historically maintained its value and
-              often appreciates when real returns on other assets decline due to
-              inflation. This intrinsic quality of gold helps SolGold maintain
-              purchasing power even in volatile economic climates, safeguarding
-              your investments
+              During periods of economic uncertainty or high inflation,
+              investors often flock to safe-haven assets like gold. This
+              increased demand can drive up the price of gold. So, even if the
+              price of everything else goes up due to inflation, the rising
+              price of gold can help offset some of those losses in your
+              portfolio.
             </Typography>
           </AnimationBox>
         </Box>
